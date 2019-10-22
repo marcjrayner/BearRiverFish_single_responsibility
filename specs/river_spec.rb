@@ -6,7 +6,7 @@ require_relative('../fish')
 class PetShopTest < MiniTest::Test
 
   def setup()
-    @river1 = River.new("Tay", [@fishy1, @fishy2, @fishy2])
+    @river1 = River.new("Tay", [@fishy1, @fishy2, @fishy1, @fishy2])
     @fishy1 = Fish.new("Salmon")
     @fishy2 = Fish.new("Trout")
   end
@@ -16,12 +16,12 @@ class PetShopTest < MiniTest::Test
   end
 
   def test_fish_count
-    assert_equal(3, @river1.fish_count())
+    assert_equal(4, @river1.fish_count())
   end
 
   def test_lose_fish
     @river1.lose_fish()
-    assert_equal(2, @river1.fish_count())
+    assert_equal(3, @river1.fish_count())
   end
 
 end

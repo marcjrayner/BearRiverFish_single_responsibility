@@ -1,6 +1,6 @@
 class River
 
-  attr_reader :name
+  attr_reader :name, :fish
 
   def initialize(name, fish)
     @name = name
@@ -8,7 +8,7 @@ class River
   end
 
   def lose_fish()
-    @fish.pop()
+    return @fish.pop()
   end
 
   def fish_count()
